@@ -438,6 +438,9 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 
 		if lsMenuIsShowed then
+                        if not IsPedInAnyVehicle(PlayerPedId(), false) then
+                                TriggerEvent('esx_lscustom:cancelInstallMod')
+                        end
 			DisableControlAction(2, 288, true)
 			DisableControlAction(2, 289, true)
 			DisableControlAction(2, 170, true)
